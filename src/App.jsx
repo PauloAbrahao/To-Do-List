@@ -6,6 +6,7 @@ import './App.css';
 import Tasks from './components/Tasks'
 import Task from './components/Task'
 import AddTask from './components/AddTask'
+import Header from './components/Header'
 
 
 function App() {
@@ -24,7 +25,12 @@ function App() {
     {
       id: '3',
       title:'Ler 1984',
-      completed: true,
+      completed: false,
+    },    
+    {
+      id: '4',
+      title:'Academia',
+      completed: false,
     },
 
   ])
@@ -39,11 +45,28 @@ function App() {
     setTasks(newTask)
   }
 
+  const handleTaskClick = (taskId) => {
+    const newTasks = tasks.map((task) => {
+      if (task.id === taskId) return { ...task, completed: !task.completed }
+
+      return task;
+    })
+
+    setTasks(newTasks)
+  }
+
+  const handleTaskDeletion = (taskId) => {
+    const newTasks = tasks.filter(task => task.id !== taskId)
+
+    setTasks(newTasks)
+  }
+
   return (
     <>
       <div className="container">
-        <AddTask handleTaskAddition={handleTaskAddition} ></AddTask>
-        <Tasks tasks={tasks}/>
+        <Header />
+        <AddTask handleTaskAddition={handleTaskAddition}  ></AddTask>
+        <Tasks tasks={tasks} handleTaskClick={handleTaskClick} handleTaskDeletion={handleTaskDeletion} />
       </div>
     </>
   );
