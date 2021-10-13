@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {v4 as uuidv4} from 'uuid'
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import axios from 'axios'
 
 import logo from './logo.svg';
 import './App.css';
@@ -7,7 +9,7 @@ import Tasks from './components/Tasks'
 import Task from './components/Task'
 import AddTask from './components/AddTask'
 import Header from './components/Header'
-
+import TaskDetails from './components/TaskDetails'
 
 function App() {
 
@@ -35,6 +37,17 @@ function App() {
 
   ])
 
+  useEffect(() => {
+    const fetchTasks = async () => {
+
+      const { data } = await axios.get("https://jsonplaceholder.cypress.io/todos?_limit=10") 
+
+      setTasks(data)
+    }
+    fetchTasks();
+  }, [])
+
+
   const handleTaskAddition = (taskTitle) => {
     const newTask = [...tasks, {
       title: taskTitle,
@@ -61,14 +74,29 @@ function App() {
     setTasks(newTasks)
   }
 
+
+  
+
   return (
-    <>
+    <Router>
       <div className="container">
-        <Header />
+        {/* 
         <AddTask handleTaskAddition={handleTaskAddition}  ></AddTask>
-        <Tasks tasks={tasks} handleTaskClick={handleTaskClick} handleTaskDeletion={handleTaskDeletion} />
+        <Tasks tasks={tasks} handleTaskClick={handleTaskClick} handleTaskDeletion={handleTaskDeletion} /> */}
+        <Header />
+
+        <Route path="/" exact render={() => (
+          <>
+            <AddTask handleTaskAddition={handleTaskAddition} ></AddTask>
+            <Tasks tasks={tasks} handleTaskClick={handleTaskClick} handleTaskDeletion={handleTaskDeletion} />
+          </>
+        )}/>
+
+          {/* path = caminho da Route, para renderizar o componente somente quando estiver na url da task */}
+
+        <Route path="/:taskTitle" exact component={TaskDetails} />
       </div>
-    </>
+    </Router>
   );
 }
 

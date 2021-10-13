@@ -15,7 +15,11 @@
 
 .buttons-container {
     cursor: pointer;
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
 }
+
 
 .remove-task-button, 
 .see-task-details-button {
@@ -23,4 +27,5 @@
     border: none;
     font-size: 24px;
     color: #ffee32;
+    margin: 0 5px;
 }
