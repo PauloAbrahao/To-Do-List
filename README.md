@@ -1,7 +1,9 @@
 # To-Do List 
 
 <h1>Sobre o projeto:</h1>
-É um `web app` que tem o propósito de listar as atividades do seu dia-a-dia, sendo possível adicionar uma task (tarefa), removê-la e até ler uma discrição mais detalhada dela.
+É um <strong>web app</strong> que tem o propósito de listar as atividades do seu dia-a-dia, sendo possível adicionar uma task (tarefa), removê-la e até ler uma discrição mais detalhada sobre ela.
+
+<img src=""> </img>
 
 <h2>Getting Started with Create React App</h2>
 
