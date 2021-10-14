@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# To-Do List 
+
+<h2>Getting Started with Create React App</h2>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
