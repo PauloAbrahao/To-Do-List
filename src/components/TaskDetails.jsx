@@ -25,7 +25,9 @@ const TaskDetails = () => {
 
                 <h2>{params.taskTitle}</h2>
 
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur totam porro atque fuga suscipit ab consequatur cum aperiam libero. Dolorum labore iste repellat ad vero tempore quos aperiam possimus saepe!</p>
+                {/* <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur totam porro atque fuga suscipit ab consequatur cum aperiam libero. Dolorum labore iste repellat ad vero tempore quos aperiam possimus saepe!</p> */}
+
+                <textarea type="text" placeholder="Descreva a task aqui"/>
             </div>
         </>
     );

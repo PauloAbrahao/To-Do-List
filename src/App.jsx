@@ -37,15 +37,15 @@ function App() {
 
   ])
 
-  useEffect(() => {
-    const fetchTasks = async () => {
+  // useEffect(() => {
+  //   const fetchTasks = async () => {
 
-      const { data } = await axios.get("https://jsonplaceholder.cypress.io/todos?_limit=10") 
+  //     const { data } = await axios.get("https://jsonplaceholder.cypress.io/todos?_limit=10") 
 
-      setTasks(data)
-    }
-    fetchTasks();
-  }, [])
+  //     setTasks(data)
+  //   }
+  //   fetchTasks();
+  // }, [])
 
 
   const handleTaskAddition = (taskTitle) => {

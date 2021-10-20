@@ -20,7 +20,6 @@ const AddTask = ({handleTaskAddition}) => {
             <input onChange={handleInputChange} className='add-task-input' value={inputData} type="text" />
             <div className="add-task-button-container">
                 <Button onClick={handleTaskClick}>Adicionar</Button> 
-
             </div>
         </div>
     );
