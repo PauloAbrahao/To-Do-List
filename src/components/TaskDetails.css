@@ -1,39 +1,19 @@
 .task-details-container {
-    background-color: #444;
-    margin: 15px 0;
-    padding: 15px 20px;
-    display: flex;
-    flex-direction: column;
-    color: #eee;
-    border-radius: 5px;
+  background-color: #444;
+  margin: 15px 0;
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: column;
+  color: #eee;
+  border-radius: 5px;
 }
 
 .task-details-container h2 {
-    margin-bottom: 5px;
-    color: #ffee32;
+  margin-bottom: 5px;
+  color: #ffee32;
 }
 
 .back-button-container {
-    width: 30%;
-    margin-top: 10px;
-}
-
-textarea {
-    margin-top: 10px;
-    padding: 15px;
-
-    width: 100%;
-    height: 125px;
-
-    background: #222222;
-    border: 1px solid #222222;
-    border-radius: 5px;
-
-    color: #eee;
-    text-align: start;
-    word-wrap: break-word;
-    word-break: break-all;
-    font-family:'Segoe UI';
-    resize: none;
-
+  width: 30%;
+  margin-top: 10px;
 }
